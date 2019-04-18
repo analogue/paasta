@@ -243,7 +243,6 @@ class TestDeployDaemon(unittest.TestCase):
             assert self.deployd.is_leader
             mock_q_metrics.assert_called_with(
                 self.deployd.inbox,
-                self.deployd.instances_that_need_to_be_bounced_asap,
                 'westeros-prod',
                 mock_get_metrics_interface.return_value,
             )
